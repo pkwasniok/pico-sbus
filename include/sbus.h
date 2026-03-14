@@ -1,6 +1,8 @@
 #pragma once
 #include "hardware/uart.h"
 
+/** Descriptor of SBUS instance.
+ */
 typedef struct {
     uint8_t *buffer_uart;
     uint8_t *buffer_frame;
@@ -16,7 +18,7 @@ typedef struct {
  */
 void sbus_init(sbus_inst_t *sbus, uart_inst_t *uart, uint gpio);
 
-/** Read value of SBUS channel.
+/** Get value of SBUS channel.
  *
  * @param[in] sbus Pointer to SBUS instance descriptor.
  * @param[in] channel SBUS channel number.

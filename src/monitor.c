@@ -27,7 +27,7 @@ int main(void) {
 
             printf("] (%4d/2047)\n", value);
         }
-        printf("\n");
+        printf("Failsafe: %d\n", sbus_is_failsafe(&sbus));
 
         sleep_ms(200);
     }

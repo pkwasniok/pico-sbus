@@ -58,6 +58,8 @@ uint16_t sbus_get_channel(sbus_inst_t *sbus, uint channel) {
 }
 
 bool sbus_is_failsafe(sbus_inst_t *sbus) {
-    return false;
+    uint8_t *buffer_frame = sbus->uart == uart0 ? buffer_frame0 : buffer_frame1;
+
+    return buffer_frame[23] & (1<<3);
 }
 
