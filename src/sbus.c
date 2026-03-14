@@ -57,3 +57,7 @@ uint16_t sbus_get_channel(sbus_inst_t *sbus, uint channel) {
     return ((buffer_frame[byte_start] | (buffer_frame[byte_start + 1] << 8) | (buffer_frame[byte_start + 2] << 16)) >> bit_offset) & 0b11111111111;
 }
 
+bool sbus_is_failsafe(sbus_inst_t *sbus) {
+    return false;
+}
+
